@@ -7,10 +7,10 @@ venue: "AIMS"        # brief name of the institution that hosts the workshop wit
 address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "38.973148"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-95.238251"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+latitude: "42.862730"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-112.433800"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "March 25-26, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "TBD"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+humantime: "8:30 am - 3:30 pm MST (UTC-7)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 2024-03-25      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2024-03-26        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Sarah Godsey, Ph.D.", "Maggi Kraft, Ph.D.", "Delaney Peterson", "Ashleigh Kirker", "Chelsea Smith"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -421,9 +421,32 @@ please preview your site before committing, and make sure to run
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+ you will need to download the workshop data and install software specific to working with geospatial data in R. You will also need R, RStudio, and some specific R packages. Give yourself plenty of time to download, unzip, and install everything you need.
 </p>
+
+{% comment %}
+These are the installation instructions for the tools used
+during the workshop.
+{% endcomment %}
+
+{% if site.carpentry == "swc" %}
+{% include swc/setup.html %}
+{% elsif site.carpentry == "dc" %}
+{% include dc/setup.html %}
+{% elsif site.carpentry == "lc" %}
+{% include lc/setup.html %}
+{% elsif site.carpentry == "incubator" %}
+Please check the "Setup" page of
+[the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
+to obtain the software and data you will need to follow the lesson.
+{% endif %}
+
+{% comment %}
+<p>
+<strong>Update from the organizers:</strong> If you are following the software installation instructions for macOS, we recommend the Install with Packages (Beginner) method for a local installation. To avoid complications of a local installation, the Docker option works well on macOS. The local installation Homebrew (Advanced) method is not working correctly due to issues with some of the packages called.  
+</p>
+{% endcomment %}
+
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
@@ -444,19 +467,4 @@ to include the relevant installation instructions.
 {% include install_instructions/videoconferencing.html %}
 {% endif %}
 
-{% comment %}
-These are the installation instructions for the tools used
-during the workshop.
-{% endcomment %}
 
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif site.carpentry == "incubator" %}
-Please check the "Setup" page of
-[the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}
