@@ -10,7 +10,7 @@ language: "en"     # lowercase two-letter ISO language code such as "fr" (see ht
 latitude: "42.862730"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-112.433800"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "March 25-26, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "8:30 am - 3:30 pm MST (UTC-7)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+humantime: "8:30 am - 3:30 pm MDT (UTC-6)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 2024-03-25      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2024-03-26        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Sarah Godsey, Ph.D.", "Maggi Kraft, Ph.D.", "Delaney Peterson", "Ashleigh Kirker", "Chelsea Smith"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -450,7 +450,7 @@ to obtain the software and data you will need to follow the lesson.
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions" target="_blank">Configuration Problems and Solutions wiki page</a>.
 </p>
 
 {% comment %}
