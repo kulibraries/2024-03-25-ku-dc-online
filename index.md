@@ -441,11 +441,14 @@ Please check the "Setup" page of
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
 
-{% comment %}
 <p>
-<strong>Update from the organizers:</strong> If you are following the software installation instructions for macOS, we recommend the Install with Packages (Beginner) method for a local installation. To avoid complications of a local installation, the Docker option works well on macOS. The local installation Homebrew (Advanced) method is not working correctly due to issues with some of the packages called.  
+<strong>Updates from the organizers:</strong> If you are following the software installation instructions for macOS, we recommend the <a href=
+https://datacarpentry.org/geospatial-workshop/index.html#option-b-docker" target="_blank">Docker option</a>. The Beginner and Advanced local installation instructions are not working correctly.<br/>
+
+For a local installation on any operating system, there is a change to the R packages you will need. Once you have installed <a href="https://datacarpentry.org/geospatial-workshop/index.html#rstudio" target="_blank">RStudio</a>, install the required R packages listed except for <code>rgdal</code>. Instead, install <code>terra</code>. Your install command will be:<br/>
+
+<code>install.packages(c("dplyr", "ggplot2", "raster", "terra", "rasterVis", "sf"))</code>
 </p>
-{% endcomment %}
 
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
